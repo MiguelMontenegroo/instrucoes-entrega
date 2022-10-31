@@ -1,0 +1,145 @@
+*{
+    margin: 5px;
+}
+
+
+.container {
+    --angle: 180deg;
+    background: linear-gradient(var(--angle), rgb(79, 216, 175), rgb(254, 255, 255));
+  }
+  body.sideways {
+    --angle: 90deg;
+  }
+main{
+    
+    display: flex;
+    align-items: baseline;
+    height: 100vh;
+justify-items: center;
+justify-content: center;
+}
+
+img {
+    width: 200px;
+    }
+    header{
+        text-align: center;
+        background-image: linear-gradient(aqua,rgb(53, 53, 255));
+        border-radius: 8px;
+    }
+    section{
+display: grid;
+align-items: start;
+grid-template-columns: 1fr;
+grid-template-rows: 4vw 1fr 1fr;
+
+    }
+    footer{
+position: sticky;
+bottom: 0;
+border: 2px solid rgb(166, 247, 46);
+background-color: bisque;
+    }
+    aside{
+border-radius: 16px;
+background-color: bisque;
+
+    }
+    button{
+        background-color: blanchedalmond;
+        color: blue;    
+        --spread: 1px;
+  box-shadow: 0 0 10px var(--spread) rgb(46, 211, 161);
+  transform: var(--scale, scale(1)) var(--translate, translate(0));
+
+    }
+    button:hover {
+        --spread: 10px;
+        --scale: scale(0.9);
+      }
+button:active{
+    background-color: white;
+    transition-duration: 0.3s;
+    --translate: translate(0, 2px);
+}
+#crepioca{
+    size: 150px;
+    margin: 32px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border: 1px solid black;
+    border-radius: 32px;
+}
+#macarrao-quatro-queijos{
+    size: 150px;
+    margin: 32px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border: 1px solid black;
+    border-radius: 32px;
+}
+#arroz-de-camarao{
+    size: 150px;
+    margin: 32px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border: 1px solid black;
+    border-radius: 32px;
+}
+.titulo-1{
+grid-column: 4/5;
+grid-row: 1/2;
+border: 1px solid black;
+
+}
+.lista-1{
+grid-row: 3/4;
+grid-column: 1/2 ;
+border: 1px solid black;
+}
+.titulo-2{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    border: 1px solid black;
+}
+.lista-2{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    border: 1px solid black;
+}
+.titulo-3{
+grid-row: 1/2;
+grid-column: 1/2;
+border: 1px solid black;
+}
+.lista-3{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    border: 1px solid black;
+}
+@media screen and (max-device-width: 480px) {
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        align-items: start;
+        
+    }
+   .titulo-1{
+    grid-row: 1/2;
+    grid-column: 1/2;
+   }
+   #macarrao-quatro-queijos{
+    grid-row: 2/3;
+    grid-column: 1/2;
+   }
+   .lista-1{
+    grid-row: 3/4;
+    grid-column: 1/2;
+   }
+   .titulo-3{
+    grid-row: 4/5;
+    grid-column: 1/2;
+   }
+
+}
